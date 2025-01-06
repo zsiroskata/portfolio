@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+}
+header h1 {
+    text-align: center;
+    width: 100%;
+    padding: 200px 0;
+    background-image: url('../imgs/headerbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-position: bottom;
+}
+
+
+
+main {
+    width: 100%;
+    background: linear-gradient(to right, #4D60A3, #7F96FF, #4D60A3); 
+}
+
+.container {
+    background-color: rgba(127, 150, 255, 0.6);
+    color: #282D40;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.aboutMe {
+    display: flex;
+    padding: 0 60px;
+    align-items: center;
+    overflow: hidden; 
+    gap: 100px;
+}
+
+.aboutMe img {
+    width: 250px;
+    height: 200px;
+    border-radius: 10%;
+    object-fit: cover;
+    filter: grayscale(100%); 
+    transition: all 0.5s ease;
+}
+
+.aboutMe img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1); 
+    transition: all 0.5s ease;
+}
+
+.aboutMe p {
+    position: relative; 
+    margin: 0;
+    padding: 0 20px; 
+    font-size: 16px;
+    text-align: justify;
+}
+/*  csík  */
+.aboutMe p::before, 
+.aboutMe p::after {
+    content: "";
+    position: absolute;
+    width: 4px; 
+    height: 110%;
+    background-color:#4060f1;
+}
+
+.aboutMe p::before {
+    top: 0;
+    left: -10px; 
+    transform: rotate(30deg); 
+}
+.aboutMe p::after {
+    top: 0;
+    right: -10px;
+    transform: rotate(30deg); 
+}
+
+
+/* másik izé */
+.goals{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    margin: 100px;
+}
+.goals h2{
+    text-align: center;
+    align-self: center;
+
+}
+
