@@ -33,7 +33,6 @@ main {
     display: flex;
     padding: 0 60px;
     align-items: center;
-    overflow: hidden; 
     gap: 100px;
 }
 
@@ -42,14 +41,18 @@ main {
     height: 200px;
     border-radius: 10%;
     object-fit: cover;
-    filter: grayscale(100%); 
     transition: all 0.5s ease;
 }
-
 .aboutMe img:hover {
-    filter: grayscale(0%);
     transform: scale(1.1); 
     transition: all 0.5s ease;
+}
+/*  kép  */
+.hide {
+    display: none !important;
+}
+.nohide {
+    display: block !important;
 }
 
 .aboutMe p {
@@ -59,6 +62,7 @@ main {
     font-size: 16px;
     text-align: justify;
 }
+
 /*  csík  */
 .aboutMe p::before, 
 .aboutMe p::after {
