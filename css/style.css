@@ -85,7 +85,7 @@ main {
 }
 
 
-/* másik izé */
+/* célok */
 .goals{
     display: grid;
     grid-template-columns: repeat(2 , 1fr);
@@ -94,6 +94,45 @@ main {
 .goals h2{
     text-align: center;
     align-self: center;
-
 }
 
+hr{
+    background-color: rgb(214, 214, 214);
+    height: 2px;
+    border: 0;
+}
+/*  utazások  */
+.tripsTitle{
+    text-align: center;
+    font-size: xx-large;
+}
+.trips h3{
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+}
+.croatia{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    margin: 100px;
+    gap: 100px;
+}
+.croatia p{
+    align-self: center;
+}
+.blond{
+    font-weight: bold;
+}
+.tripImgs{
+    width: 350px;
+    border-radius: 10px;
+}
+.trip{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    margin: 100px;
+    gap: 100px;
+}
+.trip p{
+    align-self: center;
+}
