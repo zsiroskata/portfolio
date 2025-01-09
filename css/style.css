@@ -18,11 +18,16 @@ header h1 {
 
 main {
     width: 100%;
-    background: linear-gradient(to right, #4D60A3, #7F96FF, #4D60A3); 
 }
 
+
 .container {
+    background: linear-gradient(to right, #4D60A3, #7F96FF, #4D60A3); 
+    padding: 20px;
+}
+.aboutMe-container{
     background-color: rgba(127, 150, 255, 0.6);
+    border-radius: 10px;
     color: #282D40;
     max-width: 1200px;
     margin: 0 auto;
@@ -97,42 +102,157 @@ main {
 }
 
 hr{
+    margin: 20px 0;
     background-color: rgb(214, 214, 214);
     height: 2px;
     border: 0;
 }
-/*  utazások  */
-.tripsTitle{
-    text-align: center;
-    font-size: xx-large;
+
+
+/* slider */
+.slideshow-container {
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
 }
-.trips h3{
+.slideshow-container h2{
+    padding: 50px 0 10px 0;
+    text-align: center;
+    
+}
+  
+/* Next, previous gomb */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
     color: white;
-    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+
+.text {
+    color: rgb(24, 0, 0);
+    background-color: rgba(255, 255, 255, 0.582);
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 54px;
+    width: 1176px;
     text-align: center;
 }
-.croatia{
-    display: grid;
-    grid-template-columns: repeat(2 , 1fr);
-    margin: 100px;
-    gap: 100px;
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
-.croatia p{
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.fade img{
+    border-radius: 5px;
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+}
+
+/* years */
+.container-trips{
+    background-color: #d5cdf7;
+    padding: 15px;
+    color: #404041;
+}
+.trips{
+    width: 80%;
+    display: grid;
+    gap: 500px;
+    align-content: center;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.trips h3{
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+}
+
+.listing{
     align-self: center;
 }
-.blond{
-    font-weight: bold;
+.listing ul{
+    padding-left: 20px;
 }
-.tripImgs{
-    width: 350px;
-    border-radius: 10px;
+
+/* form */
+.form{
+    background-color: rgba(159, 176, 255, 0.63);
+    padding: 50px 0 15px 0;
+    width: 100%;
+    margin: auto;
 }
-.trip{
+.form label{
+    padding: 10px;
+}
+
+.form input{
+    padding: 5px;
+    margin: 5px;
+}
+.bg{
+    border: 1px solid gray;
+    border-radius: 3px;
+    background-color: rgba(159, 177, 255, 0.233);
+}
+#contactForm{
     display: grid;
-    grid-template-columns: repeat(2 , 1fr);
-    margin: 100px;
-    gap: 100px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
 }
-.trip p{
+.first{
+    grid-column: 1;
+    justify-self: end;
     align-self: center;
+}
+.second{
+    grid-column: 2;
+}
+
+
+.form button{
+    display: grid;
+    padding: 5px;
+    width: 10%;
+    margin: 10px auto;
 }

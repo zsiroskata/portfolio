@@ -20,65 +20,127 @@
 
     <main>
         <div class="container">
-            <h2>Rólam</h2>
-            <div class="aboutMe">
-                <p>
-                    Kata vagyok, 19 éves és a NMSZC Szent-Györgyi Albert Technikumba járok. Jelenleg informatikát tanulok. Szabadidőmben szeretek filmeket nézni, videójátékokkal  játszani, valamint a barátaimmal kikapcsolódni. Nagyon szeretem a cicákat és a kávét! Egyik kedvenc kikapcsolódásom, hogy utazok és közben zenét hallgatok.
-                </p>
-                <img src="imgs/me.jpg" id="me1" class="nohide" alt="" onmouseover="vmi()">
+            <div class="aboutMe-container">
+                <h2>Rólam</h2>
+                <div class="aboutMe">
+                    <p>
+                        Kata vagyok, 19 éves és a NMSZC Szent-Györgyi Albert Technikumba járok. Jelenleg informatikát tanulok. Szabadidőmben szeretek filmeket nézni, videójátékokkal  játszani, valamint a barátaimmal kikapcsolódni. Nagyon szeretem a cicákat és a kávét! Egyik kedvenc kikapcsolódásom, hogy utazok és közben zenét hallgatok.
+                    </p>
+                    <img src="imgs/me.jpg" id="me1" class="nohide" alt="" onmouseover="vmi()">
+    
+                    <img src="imgs/me2.jpg" id="me2" class="hide" alt="" onmouseout="vmi2()">
+                    
+                </div>
+      
+                <hr>
+    
+                <div class="goals">
+                    <h2>Céljaim</h2>
+                    <p>
+                        A jövőben el szeretném elvégezni az egyetemet, és ebben a szakterületben dolgozni, hogy legyen sok pénzem, amiből majd egy lakást tudok venni.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-                <img src="imgs/me2.jpg" id="me2" class="hide" alt="" onmouseout="vmi2()">
-                
+
+
+        <!-- slider -->
+        <div class="slideshow-container">
+            <h2>Utazásaim</h2>
+
+            <div class="mySlides fade">
+         
+                <img src="imgs/slider/szentendre.jpg" alt="Szentendre" style="width:100%">
+                <div class="text">Szentendre</div>
+            </div>
+            
+            <div class="mySlides fade">
+          
+                <img src="imgs/slider/vodice.jpg" alt="Vodice" style="width:100%">
+                <div class="text">Horvátország - Vodice</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="imgs/slider/esztergom.jpg" alt="Esztergom" style="width:100%">
+                <div class="text">Esztergom</div>
             </div>
 
-            <div class="goals">
-                <h2>Céljaim</h2>
-                <p>
-                    A jövőben el szeretném elvégezni az egyetemet, és ebben a szakterületben dolgozni, hogy legyen sok pénzem, amiből majd egy lakást tudok venni.
-                </p>
+            <div class="mySlides fade">
+                <img src="imgs/slider/pozsony.jpg" alt="Pozsony" style="width:100%">
+                <div class="text">Pozsony</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="imgs/slider/visegrad.jpg" alt="Visegrád" style="width:100%">
+                <div class="text">Visegrád</div>
             </div>
 
-            <hr>
-            <h2 class="tripsTitle">Utazásaim</h2>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+           
+            <br>
+            
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+            </div>
+        </div>
+
+
+        <div class="container-trips">
             <div class="trips">
-                <h3>2023</h3>
-                <div class="croatia">
+                <div class="years">
+                    <h3>2023</h3>
                     <p>
                         Horvátországban jártam, azon belül Vodicében. Sok könyvet olvastam akkor, és számomra ez egy kellemes utazás volt.
                     </p>
-                    <img class="tripImgs" src="imgs/vodice.jpg" alt="">
-                </div>
-
-                <hr>
-                <h3>2024</h3>
-                <div class="trip">
-                    <img class="tripImgs" src="imgs/szentendre.jpg" alt="">
+                    <h3>2024</h3>
                     <p>
                         Több helyen is jártam a barátaimmal Magyarországon belül, de amit kiemelnék, az Szentendre. Nagyon tetszett a város, a táj, és amikor ott jártam, meglepően kevesen voltak. Tervezek vissza menni, hiszen a hangulata a városnak nagyon megtetszett.
                     </p>
                 </div>
-
-                <p>
-                    Még ahhol voltam 2024-ben:
-                </p>
-                <ul>
-                    <li>Halászbástya</li>
-                    <li>Nagymaros</li>
-                    <li>Visegrád</li>
-                    <li>Esztergom</li>
-                    <li>Pozsony</li>
-                </ul>
+    
+                <div class="listing">
+                    <p>
+                        Helyek ahol még jártam 2024-ben:
+                    </p>
+                    <ul>
+                        <li>Visegrád</li>
+                        <li>Esztergom</li>
+                        <li>Pozsony</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </main>
-
-
-
+    
     <footer>
-        <h3>
-            elérhetőségeim:
-        </h3>
+        <div class="form">
+            <form id="contactForm" action="form.php" method="POST" onsubmit="validateForm(event)">
+                <div class="first">
+                    <label for="name">Név:</label>
+                    <input type="text" class="bg" id="name" name="name" required><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" class="bg" id="email" name="email" required>
+                </div>
+
+                <div class="second">
+                    <label for="message">Üzenet:</label><br>
+                    <textarea class="bg" id="message" name="message" rows="5" cols="30" required></textarea>
+                </div>
+
+                <button type="submit">küldés</button>
+            </form>
+        </div>
     </footer>
+
+
 
 
     <script src="js/script.js"></script>
